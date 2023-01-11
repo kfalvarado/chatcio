@@ -1,0 +1,800 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>chatcio</title>
+
+  
+<!-- ========================INICIO ESTILOS O DOCUMENTACION SOLO PARA PLACEHOLDER========================= -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"/>
+<!-- ========================FINAL ESTILOS O DOCUMENTACION SOLO PARA PLACEHOLDER========================= -->
+
+
+<link rel="stylesheet" media="only screen and (color)" href="Ejemplo.css" />
+
+
+
+
+
+
+<style>
+
+		
+/* ===========================RESPONSIVE BACKGROUND INICIO================================== */
+
+@keyframes move {
+    100% {
+        transform: translate3d(0, 0, 1px) rotate(360deg);
+    }
+}
+
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: #2a2970;
+    overflow: hidden;
+}
+
+.background span {
+    width: 10vmin;
+    height: 10vmin;
+    border-radius: 10vmin;
+    backface-visibility: hidden;
+    position: absolute;
+    animation: move;
+    animation-duration: 32;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+.background span:nth-child(0) {
+    color: #348389;
+    top: 45%;
+    left: 20%;
+    animation-duration: 142s;
+    animation-delay: -169s;
+    transform-origin: 21vw -2vh;
+    box-shadow: -20vmin 0 2.676545941386902vmin currentColor;
+}
+.background span:nth-child(1) {
+    color: #9462a3;
+    top: 17%;
+    left: 45%;
+    animation-duration: 20s;
+    animation-delay: -53s;
+    transform-origin: -14vw -15vh;
+    box-shadow: -20vmin 0 3.2694124942189355vmin currentColor;
+}
+.background span:nth-child(2) {
+    color: #348389;
+    top: 80%;
+    left: 48%;
+    animation-duration: 149s;
+    animation-delay: -166s;
+    transform-origin: 0vw 4vh;
+    box-shadow: -20vmin 0 2.807839825889677vmin currentColor;
+}
+.background span:nth-child(3) {
+    color: #9462a3;
+    top: 70%;
+    left: 15%;
+    animation-duration: 171s;
+    animation-delay: -175s;
+    transform-origin: 7vw 21vh;
+    box-shadow: 20vmin 0 3.240840072131187vmin currentColor;
+}
+.background span:nth-child(4) {
+    color: #1e28be;
+    top: 51%;
+    left: 52%;
+    animation-duration: 9s;
+    animation-delay: -169s;
+    transform-origin: -2vw 11vh;
+    box-shadow: -20vmin 0 3.2542090434041184vmin currentColor;
+}
+.background span:nth-child(5) {
+    color: #9462a3;
+    top: 70%;
+    left: 80%;
+    animation-duration: 138s;
+    animation-delay: -61s;
+    transform-origin: 18vw -1vh;
+    box-shadow: 20vmin 0 3.4439522402042098vmin currentColor;
+}
+.background span:nth-child(6) {
+    color: #1e28be;
+    top: 47%;
+    left: 77%;
+    animation-duration: 184s;
+    animation-delay: -52s;
+    transform-origin: 11vw 19vh;
+    box-shadow: 20vmin 0 2.9818314398290147vmin currentColor;
+}
+.background span:nth-child(7) {
+    color: #1e28be;
+    top: 62%;
+    left: 96%;
+    animation-duration: 181s;
+    animation-delay: -63s;
+    transform-origin: -4vw 3vh;
+    box-shadow: -20vmin 0 2.537964331117791vmin currentColor;
+}
+.background span:nth-child(8) {
+    color: #1e28be;
+    top: 50%;
+    left: 55%;
+    animation-duration: 102s;
+    animation-delay: -148s;
+    transform-origin: 6vw -16vh;
+    box-shadow: 20vmin 0 3.08295644929027vmin currentColor;
+}
+.background span:nth-child(9) {
+    color: #1e28be;
+    top: 88%;
+    left: 5%;
+    animation-duration: 87s;
+    animation-delay: -85s;
+    transform-origin: 6vw 6vh;
+    box-shadow: 20vmin 0 3.0250266226930105vmin currentColor;
+}
+.background span:nth-child(10) {
+    color: #1e28be;
+    top: 19%;
+    left: 47%;
+    animation-duration: 160s;
+    animation-delay: -46s;
+    transform-origin: -7vw -14vh;
+    box-shadow: -20vmin 0 2.848975208037994vmin currentColor;
+}
+.background span:nth-child(11) {
+    color: #9462a3;
+    top: 12%;
+    left: 88%;
+    animation-duration: 12s;
+    animation-delay: -43s;
+    transform-origin: 16vw -12vh;
+    box-shadow: 20vmin 0 2.6646491120363516vmin currentColor;
+}
+.background span:nth-child(12) {
+    color: #348389;
+    top: 1%;
+    left: 13%;
+    animation-duration: 11s;
+    animation-delay: -19s;
+    transform-origin: 25vw 1vh;
+    box-shadow: 20vmin 0 3.247631758802026vmin currentColor;
+}
+.background span:nth-child(13) {
+    color: #9462a3;
+    top: 50%;
+    left: 34%;
+    animation-duration: 184s;
+    animation-delay: -176s;
+    transform-origin: -7vw -13vh;
+    box-shadow: -20vmin 0 2.570176653650318vmin currentColor;
+}
+.background span:nth-child(14) {
+    color: #348389;
+    top: 8%;
+    left: 7%;
+    animation-duration: 150s;
+    animation-delay: -51s;
+    transform-origin: 14vw 20vh;
+    box-shadow: -20vmin 0 3.046714027735203vmin currentColor;
+}
+.background span:nth-child(15) {
+    color: #1e28be;
+    top: 63%;
+    left: 32%;
+    animation-duration: 181s;
+    animation-delay: -94s;
+    transform-origin: -9vw -17vh;
+    box-shadow: -20vmin 0 3.1830272490035387vmin currentColor;
+}
+.background span:nth-child(16) {
+    color: #1e28be;
+    top: 89%;
+    left: 52%;
+    animation-duration: 6s;
+    animation-delay: -153s;
+    transform-origin: 4vw 20vh;
+    box-shadow: 20vmin 0 2.854635139509819vmin currentColor;
+}
+.background span:nth-child(17) {
+    color: #348389;
+    top: 46%;
+    left: 67%;
+    animation-duration: 147s;
+    animation-delay: -38s;
+    transform-origin: 20vw -9vh;
+    box-shadow: 20vmin 0 2.537885632576765vmin currentColor;
+}
+.background span:nth-child(18) {
+    color: #1e28be;
+    top: 89%;
+    left: 22%;
+    animation-duration: 87s;
+    animation-delay: -71s;
+    transform-origin: -15vw -20vh;
+    box-shadow: -20vmin 0 3.1665421133125733vmin currentColor;
+}
+.background span:nth-child(19) {
+    color: #9462a3;
+    top: 65%;
+    left: 69%;
+    animation-duration: 37s;
+    animation-delay: -118s;
+    transform-origin: 16vw 9vh;
+    box-shadow: 20vmin 0 2.7963223670583264vmin currentColor;
+}
+.background span:nth-child(20) {
+    color: #1e28be;
+    top: 46%;
+    left: 29%;
+    animation-duration: 119s;
+    animation-delay: -156s;
+    transform-origin: -19vw 14vh;
+    box-shadow: -20vmin 0 2.6832030937918483vmin currentColor;
+}
+.background span:nth-child(21) {
+    color: #1e28be;
+    top: 41%;
+    left: 33%;
+    animation-duration: 29s;
+    animation-delay: -32s;
+    transform-origin: -14vw -16vh;
+    box-shadow: 20vmin 0 2.7066704250367417vmin currentColor;
+}
+.background span:nth-child(22) {
+    color: #9462a3;
+    top: 12%;
+    left: 8%;
+    animation-duration: 77s;
+    animation-delay: -41s;
+    transform-origin: -23vw 23vh;
+    box-shadow: 20vmin 0 3.497333293511951vmin currentColor;
+
+   
+}
+/* ===========================RESPONSIVE BACKGROUND FINAL================================== */
+
+	
+
+
+
+
+
+/* ===========================RESPONSIVE CUADRADO INICIO================================== */
+.cuadrado {
+  
+  width: 25rem;
+  height: 25rem;
+  box-shadow: 0 0 1rem 0 rgb(0, 0, 0); 
+  border-radius: 5px;
+  border: 1px solid #000; /* Borde color negro y de 1 píxel de grosor */
+  background-color: rgba(255, 255, 255, 0.109);
+  backdrop-filter: blur(5px);
+  padding: 0px;
+
+
+  display: block; 
+  margin-left: auto;
+  margin-right: auto;
+
+
+ 
+
+  margin-top: 20px;
+  margin-bottom: 10px;
+  /* PARA POSICION CENTRADAD Y QUE SEA RESPONSIVE */
+  /* position: fixed; */
+  /* top: 500px;
+  left: 600px; */
+
+
+  /* transform: translate(-50%, -50%); */
+
+}
+/* ===========================RESPONSIVE CUADRADO FINAL================================== */
+
+
+  /* ===========================BUTTON CLIP INICIO================================== */
+
+  .btn1-hover {
+   width: 60px;
+   font-size: 20px;
+   font-weight: 600;
+   color: #fff;
+   cursor: pointer;
+   height: 40px;
+   text-align:center;
+   border: none;
+   background-size: 300% 100%;
+   border-radius: 5px;
+   moz-transition: all .4s ease-in-out;
+   -o-transition: all .4s ease-in-out;
+   -webkit-transition: all .4s ease-in-out;
+   transition: all .4s ease-in-out;
+ }
+.btn1-hover:hover {
+   background-position: 100% 0;
+   moz-transition: all .4s ease-in-out;
+   -o-transition: all .4s ease-in-out;
+   -webkit-transition: all .4s ease-in-out;
+   transition: all .4s ease-in-out;
+ }
+.btn1-hover:focus {
+   outline: none;
+ }
+.btn1-hover.btn1 {
+     background-image: linear-gradient(
+       to right,
+       #25aae1,
+       #4481eb,
+       #04befe,
+       #3f86ed
+     );
+     box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+  }
+  /* ===========================BUTTON CLIP FINAL================================== */
+
+/* ===========================BUTTON ENVIAR INICIO================================== */
+
+.btn2-hover {
+   width: 100px;
+   font-size: 16px;
+   font-weight: 600;
+   color: #fff;
+   cursor: pointer;
+   height: 40px;
+   text-align:center;
+   border: none;
+   background-size: 300% 100%;
+   border-radius: 5px;
+   moz-transition: all .4s ease-in-out;
+   -o-transition: all .4s ease-in-out;
+   -webkit-transition: all .4s ease-in-out;
+   transition: all .4s ease-in-out;
+ }
+.btn2-hover:hover {
+   background-position: 100% 0;
+   moz-transition: all .4s ease-in-out;
+   -o-transition: all .4s ease-in-out;
+   -webkit-transition: all .4s ease-in-out;
+   transition: all .4s ease-in-out;
+ }
+.btn2-hover:focus {
+   outline: none;
+ }
+.btn2-hover.btn2 {
+     background-image: linear-gradient(
+       to right,
+       #25aae1,
+       #4481eb,
+       #04befe,
+       #3f86ed
+     );
+     box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+  }
+  /* ===========================BUTTON ENVIAR FINAL================================== */
+
+  /* ===========================BARRA DE BUTTON CLIP Y BUTTON ENVIAR Y EL PLACEHOLDER INICIO================================== */
+  .my-class-form-control-group{
+  display:flex;
+  align-items:Center; 
+
+   
+  position: fixed;
+  top: 320px;
+  margin-left: 10px;
+  margin-right: 10px;
+ margin-bottom: 20px;
+  /* transform: translate(330px, 10px); */
+}
+
+  /* ===========================BARRA DE BUTTON CLIP Y BUTTON ENVIAR Y EL PLACEHOLDER FINAL================================== */
+
+
+   /* ===========================CAJA DE CHAT INICIO================================== */
+
+#chatbox {
+  width: 24.9rem;
+  height: 11.9rem;
+  background-color: rgba(50, 106, 210, 0.468);
+  backdrop-filter: blur(5px);
+  padding: 10;
+  
+  
+  /* PARA POSICION CENTRADAD Y QUE SEA RESPONSIVE */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+/* ===========BARA PARA BAJAR Y SUBIR DENTRO DEL CHAR========= */
+  overflow: auto;
+  
+
+}
+
+/* =============TAMANO DEL SCROLLBAR ============== */
+#chatbox::-webkit-scrollbar {
+  width: 8px;
+}
+ 
+ /* =============ESTILO DEL SCROLLBAR ============== */
+ #chatbox::-webkit-scrollbar-thumb {
+  background: rgba(0, 123, 255, 0.601);
+  border-radius: 2px;
+}
+
+/* =============ESTILO DEL FONDO DEL SCROLLBAR ============== */
+#chatbox::-webkit-scrollbar-track {
+  background: rgba(250, 250, 250, 0.609);
+  border-radius: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+    /* ===========================CAJA DE CHAT FINAL================================== */
+
+    /* ===========================RELOJ, FECHA, TIEMPO INICIO================================== */
+    .fecha{
+        color: #fff;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff;
+  
+    position: absolute;
+    top: 6%;
+    left: 12%;
+    transform: translate(-50%, -50%)
+    }
+
+    .tiempo{
+        color: #fff;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff;
+  
+    position: absolute;
+    top: 5%;
+    right: -5.5%;
+    transform: translate(-50%, -50%);
+    }
+    /* ===========================RELOJ, FECHA, TIEMPO FINAL================================== */
+
+
+    
+/* ===================INICIO DE MEDIA QUERY========================= */
+  
+    @media (max-width: 1020px) and (orientation: landscape)  {
+        .cuadrado {
+  width: 28rem;
+  height: 18rem;
+  box-shadow: 0 0 1rem 0 rgb(0, 0, 0); 
+  border-radius: 5px;
+  border: 1px solid #000; /* Borde color negro y de 1 píxel de grosor */
+  background-color: rgba(255, 255, 255, 0.109);
+  backdrop-filter: blur(5px);
+  padding: 0px;
+
+
+  display: block; 
+  margin-left: auto;
+  margin-right: auto;
+
+
+ 
+
+  margin-top: 20px;
+  margin-bottom: 10px;
+  
+}   
+
+#chatbox {
+  width: 27.9rem;
+  height: 10rem;
+  background-color: rgba(50, 106, 210, 0.468);
+  backdrop-filter: blur(5px);
+  padding: 10;
+  /* PARA POSICION CENTRADAD Y QUE SEA RESPONSIVE */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+/* ===========BARA PARA BAJAR, SUBIR, DERECHA IZQUIERDA DENTRO DEL CHAT========= */
+  overflow: auto;
+  
+ }
+
+
+ .fecha{
+        color: #fff;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff;
+  
+    position: absolute;
+    top: 8%;
+    left: 12%;
+    transform: translate(-50%, -50%)
+    }
+
+    .tiempo{
+        color: #fff;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff;
+  
+    position: absolute;
+    top:7%;
+    right: -5.5%;
+    transform: translate(-50%, -50%);
+    }
+
+    .my-class-form-control-group{
+  display:flex;
+  align-items:Center; 
+  
+
+    /* PARA POSICION CENTRADAD Y QUE SEA RESPONSIVE */
+  /* position: fixed;
+  top: 330px;
+  left: 10px; */
+  position: fixed;
+  top: 235px;
+  margin-left: 14px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  /* transform: translate(330px, 10px); */
+}
+
+}
+
+/* ===================FINAL DE MEDIA QUERY========================= */
+
+/* =====================INICIO ESTILO DE LA LISTA DE CHAT =============== */
+    ul {list-style-type: none; margin:0;  padding: 0;}
+    ul> li{padding: 0.5rem 0rem;}
+    ul> li:nth-child(odd) {background: rgba(0, 123, 255, 0.266); text-align: right;
+    
+    }
+   
+
+/* =====================FINAL ESTILO DE LA LISTA DE CHAT =============== */
+    
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+</head>
+<body>
+                <div class="background">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                 <form action="">
+                    <div class="cuadrado">
+                    <center>
+                        <h3 > CHATCIO</h3>
+                        <g4>CHAT EN VIVO <br></g4> 
+                        <p class="fecha"></p>
+                        <p class="tiempo"> </p>
+                    
+                        <!-- =====================INICIO DEL PLACEHOLDER======================= -->
+                        <div class="form-inline">
+                            <div id="field_wrapper">
+                              <div class="my-class-form-control-group">
+                                <button class="btn1-hover btn1"><i id="clip" class="fas fa-paperclip"></i></Button></a>&nbsp;<input type="text" class="form-control mr-1" name="field_name[]" placeholder="Escribir aqui..."/>
+                                <button type="submit" class="btn2-hover btn2">Enviar</Button>
+                                    
+                              </div>
+                             </div>
+                          </div>
+
+                           <!-- =====================FIN DEL PLACEHOLDER======================= -->
+                           <!-- =====================INICIO DE CAJA DE CHAT======================= -->
+                           <div id="chatbox">
+                            <ul class="lista" ></ul>
+
+                           </div>
+                           <!-- =====================FIN DEL CAJA DE CHAT======================= -->
+
+                           
+                           
+                           
+                    </center>
+                    </div>
+
+                </form>
+                </div>
+            
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+<!--==============SCRIPT PARA LLAMAR A SOCKET.IO Y MOSTRAR LOS EVENTOS=========  -->
+<script src="/socket.io/socket.io.js"></script>
+
+
+<script>
+	
+		// PRUEBA DE FUNCIONAMIENTO DE JQUERY
+		// alert('works!')
+		let  socket = io()
+		// OBTENIENDO LOS ELEMENTOS DEL DOM
+		// const $messageForm = $('#message-form');
+		// const $messageBox = $('#message');
+		// const $chat = $('#chat');
+        const form = document.querySelector('form')
+        const input = document.querySelector('input')
+        let mensajes= document.querySelector('ul')
+
+        form.addEventListener('submit', (e)=>{
+            e.preventDefault()
+            if(input.value){
+                socket.emit('chat', input.value)
+                input.value = ""
+            }
+        })
+
+        socket.on('chat', (msg)=>{
+            let item = document.createElement('li')
+            item.textContent = msg
+            mensajes.appendChild(item)
+            window.scrollTo(0, document.body.scrollHeight)
+
+
+        })
+
+		document.getElementById ("file").onchange = function ( e ) {
+    	let reader = new FileReader();
+    	reader.readAsDataURL(e.target.files[ 0 ]);
+    	reader.onload = function(){
+        let preview = document.getElementById ( 'chat') ;
+        imagenes = document.createElement ('img') ;
+        imagenes.src = reader.result ;
+        imagenes.style.width = " 200px "
+        preview.append (imagenes);
+
+		// socket.emit("imagenes", imagenes);
+
+		
+	}}	
+
+</script>
+
+
+<script>
+
+/* ===========================ESCRIPT PARA RELOJ INICIO================================== */
+
+const $tiempo = document.querySelector('.tiempo'),
+$fecha = document.querySelector('.fecha');
+
+function relojdigital(){
+    let f = new Date(),
+    dia = f.getDate(),
+    mes = f.getMonth() + 1,
+    anio = f.getFullYear(),
+    diaSemana = f.getDay();
+
+
+    dia = ('0' + dia).slice(-2);
+    mes = ('0' + mes).slice(-2);
+    
+    let timeString = f.toLocaleTimeString();
+    $tiempo.innerHTML = timeString;
+
+    let semana = ['Lunes','Martes','Miercoles','Jueves','Viernes','Sabado','Domingo'];
+    let showSemana = (semana[diaSemana]);
+    $fecha.innerHTML = `${showSemana}<br> ${dia}-${mes}-${anio}`
+
+}
+
+
+setInterval(() => {
+    relojdigital()
+    
+}, 1000);
+
+
+
+/* ===========================ESCRIPT PARA RELOJ FINAL================================== */
+
+
+
+</script>
+
+
+
+</html>
+
+
+
+
+	
+
+
+        
+        
+        
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
